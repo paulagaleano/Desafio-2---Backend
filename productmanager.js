@@ -16,7 +16,7 @@ class productManager {
 
     async #productCode(code) {
         const fileData = await this.#readFile();
-        return fileData.find((objeto) => objeto.code === code);
+        return fileData.find((obj) => obj.code === code);
     }
 
     async getProducts() {
@@ -33,7 +33,7 @@ class productManager {
         const fileData = await this.#readFile();
         if (await this.#productCode(obj.code)) return console.log(`Producto con el codigo ${obj.code} ya existe`)
         try {
-            if (fileData.lenght !== 0) await fs.promises.writeFile(this.path, JSON.stringify([...fileData, { ...obj, id: fileData[fileData.lenght - 1].id + 1}], null, 2), 'utf-8')
+            if (fileData.lenght !== 0) await fs.promises.writeFile(this.path, JSON.stringify([...fileData, { ...obj, id: fileData[fileData.lenght - 1].id + 1},], null, 2), 'utf-8')
             else await fs.promises.writeFile(this.path, JSON.stringify([{ ...obj, id: 1}]), 'utf-8')
         } catch (error) {
             console.log(error)

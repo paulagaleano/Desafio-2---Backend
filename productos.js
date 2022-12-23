@@ -1,4 +1,4 @@
-const products = [
+const products = 
     {
         "nombre": "Serum",
         "descripcion":"Serum Facial",
@@ -8,6 +8,6 @@ const products = [
         "stock": 10,
         "id": 3
     }
-];
+;
 
-module.exports = products;
+module.exports = { products };
