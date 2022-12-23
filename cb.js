@@ -1,12 +1,10 @@
 const productManager = require("./productmanager");
-const  { Serum } = require("./productos.js")
-
-productManager
+const  [ serum ] = require("./productos");
 
 const newProductManager = new productManager('productos.json');
-/* newProductManager.addProduct(Serum) */
+/* newProductManager.addProduct(serum) */
 /* newProductManager.getProducts()
-console.log(Serum) */
-/* newProductManager.getProductById(5) */
+console.log(serum) */
+/* newProductManager.getProductById(1) */
 /* newProductManager.updateProduct() */
 /* newProductManager. deleteProductById() */
