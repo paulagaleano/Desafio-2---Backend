@@ -1,5 +1,4 @@
-const products = [
-    {
+const serum = {
         nombre: "serum",
         descripcion:"Serum Facial",
         precio: 3000,
@@ -8,6 +7,16 @@ const products = [
         stock: 10,
         id: 3
     }
-]
 
-module.exports = products;
+const tonico = {
+        nombre: "tonico",
+        descripcion:"tonico facial",
+        precio: 1000,
+        thumbnail: "img2.png",
+        code: "1003",
+        stock: 5,
+        id: 2
+    }
+
+
+module.exports = { serum, tonico };

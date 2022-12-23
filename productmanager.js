@@ -25,7 +25,7 @@ class productManager {
             if (fileData.length === 0) throw new Error(`Producto no encontrado`)
             else console.log(fileData)
         } catch (error) {
-            console.log(`Producto no encontrado`)
+            console.log(`Producto encontrado`)
         }
     }
 
@@ -66,12 +66,13 @@ class productManager {
         try{
             const fileData = await this.#readFile()
             const productsFiltered = fileData.filter((product) => product.id !== id);
-            if (!fileData.find((obj)=> obj.id ==id )) throw new Error(`${id} not found`)
-            else await fs.promises.writeFile(this.filepath, JSON.stringify(productsFiltered,null, 2))
+            if (!fileData.find((obj)=> obj.id ==id )) throw new Error(`${id} no se encuentra`)
+            else await fs.promises.writeFile(this.path, JSON.stringify(productsFiltered,null, 2))
         }catch (error){
             console.log(error)
         }
     }
 }
+
 
 module.exports = productManager;
