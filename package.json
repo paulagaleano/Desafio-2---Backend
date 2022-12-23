@@ -1,0 +1,17 @@
+{
+  "name": "fs_sinc",
+  "version": "1.0.0",
+  "description": "Desafio 2 de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Desafio",
+    "2",
+    "Coder",
+    "House"
+  ],
+  "author": "Galeano Paula",
+  "license": "ISC"
+}
