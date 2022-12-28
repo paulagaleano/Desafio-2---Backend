@@ -13,7 +13,7 @@ app.get("/bienvenido", function (req, res) {
     const respuesta = `
     <html> 
         <body> 
-            <h1> la concha de tu tia </h1>
+            <h1> ejemplo </h1>
         </body>
     </html>
     `;
